@@ -75,3 +75,9 @@ implicit intent:- Tell what action you want to perform without worrying about wh
 
 
 Intent Resolution:- package manager takes the intent and compare it with the diffeent of activities and services and when it founds no onw then it shows no list activity. 2)when it found one activity then it will start directly that activity. 3)when the multiple activity occur then it will show that list of activity to chosse us, this is called intent resolution.
+
+//Get fullscreen feature 
+type this code before setContent in main activity and also set no action bar in styles.xml
+requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_main);
