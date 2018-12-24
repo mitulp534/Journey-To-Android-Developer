@@ -81,3 +81,19 @@ type this code before setContent in main activity and also set no action bar in 
 requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+	
+//	
+//using event listener for opening activity
+step 1- cast your textview or button view object
+TextView abcd = (TextView) findViewById(R.id.abcd);
+step 2- set click listener
+abcd.setOnClickListener(new View.OnClickListener(){
+	Intent abcdIntent = new Intent(new MainActivity.this,AbcdActivity.class);
+	startActivity(abcdIntent);
+});
+
+This will start new activity as soon as you press on textview
+
+//////
+
+	
