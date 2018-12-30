@@ -96,4 +96,12 @@ This will start new activity as soon as you press on textview
 
 //////
 
+// hide or make visible views with method
+
+setVisibility method:- there is three parameter you can pass is : VISIBLE, INVISIBLE and GONE.
+this method helps to hide or make visible any view in the code.
+ex:- textView.setVisibility(View.VISIBLE); //then textview will be vivible
+textView.setVisibility(View.INVISIBLE);// then view will be invisible but still takes up space for layout purpose
+textView.setVisiblity(View.GONE);// thne view will be invisible and doesn't take space for layout purpose
+
 	
