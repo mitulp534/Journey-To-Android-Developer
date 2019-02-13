@@ -104,4 +104,10 @@ ex:- textView.setVisibility(View.VISIBLE); //then textview will be vivible
 textView.setVisibility(View.INVISIBLE);// then view will be invisible but still takes up space for layout purpose
 textView.setVisiblity(View.GONE);// thne view will be invisible and doesn't take space for layout purpose
 
+
+// Some little info about when taking input from user
+if you use nextInt()method and after thar instant you use nextLine() method then it will return blank because it already read 
+integers untill user finish input. so if you want to read your next input then you have to take it to the next line after that 
+you can only get input otherwise yoy will get blank.
+//
 	
