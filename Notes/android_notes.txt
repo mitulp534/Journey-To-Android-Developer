@@ -111,3 +111,12 @@ integers untill user finish input. so if you want to read your next input then y
 you can only get input otherwise yoy will get blank.
 //
 	
+//How to draw a separate line 
+<view
+android:layout_marginTop="2dp"
+        android:layout_below="@id/App_name" //mention layout you want to draw line below
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+/>
+//
