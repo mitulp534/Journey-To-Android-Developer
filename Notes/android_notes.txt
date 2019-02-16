@@ -3,7 +3,6 @@ onPause()- when app have some dialouge popup or any reason when app got some par
 onStop()- when app is properly closed or home button is pressed then that state is called as stop.
 
 
-
 // another way to use interface instade of implements and making objects and calling that's like other stuffs
 interface I{
 	public void test();	
@@ -119,4 +118,18 @@ android:layout_marginTop="2dp"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
 />
+//
+
+// How to use gradient color background
+add gradient.xml file into your drawable folder
+Then define start color end color and center color thats it
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:startColor="#3B5998"
+        android:endColor="#00000000"
+        android:angle="45"/>    
+</shape>
+then use android:background="@drawable/gradient" where you want
 //
