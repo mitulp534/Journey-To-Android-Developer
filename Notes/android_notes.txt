@@ -133,3 +133,15 @@ Then define start color end color and center color thats it
 </shape>
 then use android:background="@drawable/gradient" where you want
 //
+
+// How to draw separate line
+//write this in dash.xml file in drawable folder
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
+    <stroke android:color="@color/editTextBG"
+        android:width="1dp"
+        android:dashGap="1.5dp"
+        android:dashWidth="3dp"
+        />
+
+</shape>
