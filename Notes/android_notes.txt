@@ -182,3 +182,17 @@ then use android:background="@drawable/gradient" where you want
 
 </resources>
 
+//how to add fadein and fadeout animation in bottom navigation
+1) add android resource directory under res folder named anim
+2) make two animation resource files for fade in and fade out
+
+1) fade in:- 
+<alpha android:fromAlpha="0"
+        android:toAlpha="1"
+        android:duration="300"
+        android:interpolator="@android:anim/accelerate_interpolator"/>
+2) fade out:-
+<alpha android:fromAlpha="1"
+        android:toAlpha="0"
+        android:duration="300"
+        android:interpolator="@android:anim/accelerate_interpolator"/>
