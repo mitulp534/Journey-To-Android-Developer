@@ -145,3 +145,23 @@ then use android:background="@drawable/gradient" where you want
         />
 
 </shape>
+
+//how to make any pattern with adding some shapes into layout
+
+//first make an shape file for perticular shape
+	<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/colorPrimary"/>
+
+</shape>
+// then implement shape into image view
+ <ImageView
+                android:id="@+id/imageview1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/linearLayout1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-10dp"
+                android:rotation="45"
+                android:src="@drawable/square" />
+	//and apply minus or plus margin as per your requirment
