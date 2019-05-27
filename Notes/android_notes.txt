@@ -196,3 +196,9 @@ then use android:background="@drawable/gradient" where you want
         android:toAlpha="0"
         android:duration="300"
         android:interpolator="@android:anim/accelerate_interpolator"/>
+	
+	
+// Definition od synchronous and Asynchronous
+
+synchronous :- Waiting for something to happen( and doing nothing else untill it happen)before proceeding
+Asynchronous :- Do something else while you're waiting for the event to happen, when the event happens you will get called back and you can jump into action
