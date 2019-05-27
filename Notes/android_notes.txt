@@ -202,3 +202,6 @@ then use android:background="@drawable/gradient" where you want
 
 synchronous :- Waiting for something to happen( and doing nothing else untill it happen)before proceeding
 Asynchronous :- Do something else while you're waiting for the event to happen, when the event happens you will get called back and you can jump into action
+
+// Audio focus
+Two or more Android apps can play audio to the same output stream simultaneously. The system mixes everything together. While this is technically impressive, it can be very aggravating to a user. To avoid every music app playing at the same time, Android introduces the idea of audio focus. Only one app can hold audio focus at a time
