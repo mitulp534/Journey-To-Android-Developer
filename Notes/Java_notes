@@ -1,0 +1,12 @@
+-->  When representating a Float data type, We should append letter f to the end of the data type otherwise it will save as double.
+     ex: float=5.67f
+     if we do not write f and we declare float=5.67 then it will return error because java automatically considered 5.67 as a double value.
+ 
+--> In java if you do not assign value to variable then if a variable is instance variable(which you declare in the class) then it by default holds 0.
+    same as static variable also holds 0 if you haven't assigned him but local variable(defined inside the function) they holds noting and stay as blank 
+    so if you try to access them then it will return an error.
+    
+--> instance variable, static variable holds value 0 if they are not assigned value and refrence variable holds null if they are not assigned.
+    
+--> You can not declare varibale as static inside a method. 
+    Inside method all variables are local variables that has no existance outside this method thats why they cann't be static.
