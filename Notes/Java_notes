@@ -10,3 +10,5 @@
     
 --> You can not declare varibale as static inside a method. 
     Inside method all variables are local variables that has no existance outside this method thats why they cann't be static.
+    
+--> There can on;y be one public class in java file. you need to save file name same as the class name which has the main method.
