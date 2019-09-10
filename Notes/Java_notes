@@ -14,3 +14,9 @@
 --> There can on;y be one public class in java file. you need to save file name same as the class name which has the main method.
 
 --> we can not  declare static variable inside function
+
+--> Problem with NextLine()
+     That's Because the Scanner.nextInt() method does not consume the last new line character of your input , and thus that new line 
+     is consumed in the next call to Scanner.nextLine().
+     
+     You will encounter the similar behaviour when you use Scanner.nextLine after Scanner,next().
