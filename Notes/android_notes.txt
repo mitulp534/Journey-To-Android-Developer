@@ -245,3 +245,141 @@ Two or more Android apps can play audio to the same output stream simultaneously
                    android:maxLines="1"
                    android:singleLine="true" />
            </android.support.design.widget.TextInputLayout>
+
+
+
+
+// How to make List view 
+
+First you need 3 class
+one is main class of list view
+second one is for activity
+third is for adapter
+
+for example:
+Earthquake.java
+EarthquakeActivity.java
+EarthquakeAdapter.java
+
+
+*****Earthquake.java*****
+
+package com.example.android.quakereport;
+
+public class Earthquake {
+
+    //Declare a variables
+    private String mMagnitude;
+    private String mLocation;
+    private String mDate;
+
+    //initialized to constructor
+    public Earthquake(String magnitude,String location, String date){
+        mMagnitude=magnitude;
+        mLocation=location;
+        mDate=date;
+    }
+
+    //to get access private members
+    public String getMagnitude(){
+        return mMagnitude;
+    }
+
+    public String getLocation(){
+        return mLocation;
+    }
+    public String getDate(){
+        return mDate;
+    }
+}
+
+
+
+
+***** EarthquakeActivity.java*****
+
+package com.example.android.quakereport;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+
+public class EarthquakeActivity extends AppCompatActivity {
+
+    public static final String LOG_TAG = EarthquakeActivity.class.getName();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.earthquake_activity);
+
+        // Create a fake list of earthquake locations.
+        ArrayList<Earthquake> earthquakes = new ArrayList<>();
+       earthquakes.add(new Earthquake("7.2","San Francisco","Feb 2 2016"));
+        earthquakes.add(new Earthquake("6.1","London","July 20 2015"));
+        earthquakes.add(new Earthquake("3.9","Tokyo","Nov 10 2014"));
+        earthquakes.add(new Earthquake("5.4","Mexico City","May 3 2014"));
+        earthquakes.add(new Earthquake("2.8","Moscow","Jun 31 2013"));
+        earthquakes.add(new Earthquake("4.9","Rio de janerio","Aug 19 2012"));
+        earthquakes.add(new Earthquake("1.6","Paris","Oct 30 2011"));
+
+
+        ListView earthquakeListView = (ListView) findViewById(R.id.list);
+
+
+        EarthquakeAdapter adapter = new EarthquakeAdapter(this,earthquakes);
+
+
+        earthquakeListView.setAdapter(adapter);
+    }
+}
+
+
+*****EarthquakeAdapter.java*****
+package com.example.android.quakereport;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
+
+    public EarthquakeAdapter(Context context, List<Earthquake>earthquakes){
+        super(context,0,earthquakes);
+
+    }
+
+    public View getView(int position, View convertView, ViewGroup parent){
+        View listItemView = convertView;
+        if(listItemView==null){
+            listItemView= LayoutInflater.from(getContext()).inflate(R.layout.earthquake_list_item,parent,false);
+        }
+        //find the earthquake at given position in list
+        Earthquake currentEarthquake=getItem(position);
+
+        TextView magnitudeView=(TextView)listItemView.findViewById(R.id.magnitude);
+        magnitudeView.setText(currentEarthquake.getMagnitude());
+
+        TextView locationView=(TextView)listItemView.findViewById(R.id.location);
+        locationView.setText(currentEarthquake.getLocation());
+
+        TextView dateView=(TextView)listItemView.findViewById(R.id.date);
+        dateView.setText(currentEarthquake.getDate());
+        return listItemView;
+    }
+}
+
+
+-> First you need to declare and initialize your variable in main list class
+-> second you need to make an array list
+-> you need to create an adapter for your list view.
+
