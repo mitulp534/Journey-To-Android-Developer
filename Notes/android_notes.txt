@@ -383,3 +383,8 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
 -> second you need to make an array list
 -> you need to create an adapter for your list view.
 
+// How to change your Status bar colour to black
+
+getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR); 
+--> just add this thing in on create method
+
