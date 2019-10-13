@@ -388,3 +388,9 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
 getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR); 
 --> just add this thing in on create method
 
+
+// Botom navigation activity
+You need to remove this
+NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+from bottom navigation java file if you have set your screen mode to full screen(No action bar).
+
