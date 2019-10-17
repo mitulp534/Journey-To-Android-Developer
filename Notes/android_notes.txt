@@ -394,3 +394,6 @@ You need to remove this
 NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 from bottom navigation java file if you have set your screen mode to full screen(No action bar).
 
+// Avoid NullPointerException in fragments
+If you are workin in fragments then write getActivity.getApplicationContext() rather than context or this.
+
