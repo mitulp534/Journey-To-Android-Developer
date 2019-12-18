@@ -20,3 +20,29 @@
      is consumed in the next call to Scanner.nextLine().
      
      You will encounter the similar behaviour when you use Scanner.nextLine after Scanner,next().
+
+--> Link list functions:
+Node start;
+int size;
+
+LinkList();
+boolean isEmpty();
+int getListSize();
+void insertAtStart(int val);
+void insertAtEnd(int val);
+void insertAtPos(int val);
+void deleteAtPos();
+void deleteFirst();
+void deleteLast();
+void viewList();
+
+Node functions:
+int data;
+Node next;
+
+Node();
+Node(int d, Node n);
+void setNext(Node n);
+void setData(int d);
+Node getNext();
+int getData();
