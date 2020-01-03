@@ -397,3 +397,5 @@ from bottom navigation java file if you have set your screen mode to full screen
 // Avoid NullPointerException in fragments
 If you are workin in fragments then write getActivity.getApplicationContext() rather than context or this.
 
+
+Context:- https://www.freecodecamp.org/news/mastering-android-context-7055c8478a22/
