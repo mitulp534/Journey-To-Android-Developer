@@ -399,3 +399,13 @@ If you are workin in fragments then write getActivity.getApplicationContext() ra
 
 
 Context:- https://www.freecodecamp.org/news/mastering-android-context-7055c8478a22/
+
+Center Constraint: Top and Bottom are constrained to the same view
+textAppearance attribute can be used to set text size at different sizes. like small, large, display1, display 2 etc
+Baseline Constraint: Align two baselines of the views that contain text
+Bias: Allows you to move a widget withh a tendancy to one constraint
+Chains: A chain is a group of views that are linked to each other with bi-directional position constraint.
+Group: A group is a helper element that is used to group views together
+      note: Not to be confused with android viewgroup
+      Used to set Visibility of all elements.
+Barrier: A Barrier references multiple widgets as input, and creates a virtual guideline based on the most extreme widget on the specified side. For example, a left barrier will align to the left of all the referenced views.
