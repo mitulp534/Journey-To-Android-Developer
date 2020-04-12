@@ -409,3 +409,8 @@ Group: A group is a helper element that is used to group views together
       note: Not to be confused with android viewgroup
       Used to set Visibility of all elements.
 Barrier: A Barrier references multiple widgets as input, and creates a virtual guideline based on the most extreme widget on the specified side. For example, a left barrier will align to the left of all the referenced views.
+
+Use include tag to remove code redudancy. If same button or anything we need to use multiple times. if we write a code multiple time, it will affecton performance and it will duplicate code. So, rather then we can use just one single time write a code and make xml file in drawable folder. and then whenever we wanted to use just use include tag and layout name.
+ex. <include
+          android: id="@+id/image1"
+	  layout="@drawable/share.xml"/>
