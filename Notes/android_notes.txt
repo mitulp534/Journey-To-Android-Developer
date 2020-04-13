@@ -414,3 +414,22 @@ Use include tag to remove code redudancy. If same button or anything we need to 
 ex. <include
           android: id="@+id/image1"
 	  layout="@drawable/share.xml"/>
+	  
+	  
+
+Async Task: Allows you to run a task on background thread, while publishing resullt to the UI thread.
+Async task is a generic class so that it takes parameterized type and constructor
+3 types used by asyncs task following: 1. Params- parameter type sent to the task upon execution
+2. progress- Type published to update progress during the background computation
+3- result- the type of the  result of the background computation
+
+primary functions to override:
+1) doInBackground
+2) onProgressUpdate
+3)onPostExecutee
+4)onPreExecute
+
+onPreExcute() runs in main thread
+doInBackground() runs in background thread
+onPostExecute() runs in main thread
+publishProgress() runs in background thread
